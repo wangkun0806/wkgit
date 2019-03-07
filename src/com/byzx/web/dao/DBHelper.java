@@ -16,6 +16,9 @@ public class DBHelper {
 	public User findUserByName(String username) {
 		String sql = "select * from user where uname='" + username + "'";
 		List<User> users = DBUtils.findUser(sql);
+		
+		
+		
 		return users.size()==0?null:users.get(0);
 	}
 	
